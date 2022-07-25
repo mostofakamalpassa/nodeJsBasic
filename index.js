@@ -13,3 +13,11 @@
 // // console.log(readFiles());
 // console.log(renameFiels());
 // console.log(deleteFiles());
+
+// const {osSystem} = require('./moduels/osSystem');
+
+// osSystem();
+
+const {filePath} = require('./moduels/filePath');
+
+filePath();
