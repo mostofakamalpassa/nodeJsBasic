@@ -35,9 +35,33 @@ const readFiles = () => {
     )
 }
 
+const renameFiels = () =>{
+    return fs.rename('demo.txt','demo2.txt', (err)=>{
+        if(err){
+            console.log('error : ', err )
+        }else{
+            console.log('success');
+        }
+    })
+}
+
+// delete files 
+
+const deleteFiles = () =>{
+    return fs.unlink('demo2.txt',(err) =>{
+        if(err){
+            console.log('error : ', err);
+        }else{
+            console.log('Success');
+        }
+    })
+}
+
 module.exports = {
     filesWrite,
     appendFiles,
-    readFiles
+    readFiles,
+    renameFiels,
+    deleteFiles
 }
 
